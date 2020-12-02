@@ -21,7 +21,6 @@ cnt = 1
 while a < b:
     a = a + ((old_day * 10) / 100)
     old_day = a
-    # print("%d-й день: %.2f" % (cnt, a))
     cnt += 1
 
 print(f'на {cnt - 1}-й день спортсмен достиг результата — не менее {b} км.')
