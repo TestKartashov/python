@@ -14,6 +14,8 @@ num = 0
 while i < len(n_str):
     if len(n_str) > (i + 1) and num < int(n_str[i + 1]):
         num = int(n_str[i + 1])
+    if num == 9:
+        break
     i += 1
 
 print(num)
@@ -29,6 +31,8 @@ while i < len(n_str):
 
         if max_num < num:
             max_num = num
+        if max_num == 9:
+            break
     i += 1
 
 print(max_num)
