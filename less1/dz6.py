@@ -22,8 +22,8 @@ try:
 
     print(f'на {cnt - 1}-й день спортсмен достиг результата — не менее {b} км.')
 
-except:
-    print('Неверное значение')
+except Exception as err:
+    print(f'Error {err}')
 
 # 1-й день: 2
 # 2-й день: 2,2
