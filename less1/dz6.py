@@ -10,20 +10,20 @@ b_txt = input('Введите b: ')
 try:
     a = int(a_txt)
     b = int(b_txt)
+
+    old_day = 0
+    temp = a
+
+    cnt = 1
+    while a < b:
+        a = a + ((old_day * 10) / 100)
+        old_day = a
+        cnt += 1
+
+    print(f'на {cnt - 1}-й день спортсмен достиг результата — не менее {b} км.')
+
 except:
     print('Неверное значение')
-    exit()
-
-old_day = 0
-temp = a
-
-cnt = 1
-while a < b:
-    a = a + ((old_day * 10) / 100)
-    old_day = a
-    cnt += 1
-
-print(f'на {cnt - 1}-й день спортсмен достиг результата — не менее {b} км.')
 
 # 1-й день: 2
 # 2-й день: 2,2
