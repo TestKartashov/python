@@ -16,6 +16,7 @@ def my_wh(var_1):
     lis = var_1.split(" ")
     res = ""
     for l in lis:
+        """Первая проверка чтоб не проставлял пробел"""
         if res == "":
             res = int_func(l)
         else:
