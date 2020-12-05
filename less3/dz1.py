@@ -4,10 +4,19 @@
 # обработку ситуации деления на ноль.
 
 def del_num(var_1, var_2):
+    '''
+    Функция деления числа
+    :param var_1:
+    :param var_2:
+    :return: Возвращает (Значение,Описание ошибки если есть)
+    '''
     try:
+        if var_2 == 0:
+            raise ZeroDivisionError
+
         return var_1 / var_2, ''
-    except ZeroDivisionError as err:
-        return None, err
+    except ZeroDivisionError as ss:
+        return None, "Деление на 0"
 
 
 inp_1 = int(input("Enter number One: "))
