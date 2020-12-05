@@ -6,18 +6,18 @@
 # этих чисел к полученной ранее сумме и после этого завершить программу.
 
 def my_while():
-    global_num = 0
+    num = 0
 
     def list_sum(var_str):
         try:
             lis = var_str.split(" ")
-            nonlocal global_num
+            nonlocal num
             for l in lis:
                 if not l.isdigit():
                     return 0
                 i = int(l)
-                global_num += i
-            print("Сумма: ", global_num)
+                num += i
+            print("Сумма: ", num)
 
             return True
         except Exception as s:
@@ -29,7 +29,7 @@ def my_while():
         if not list_sum(num):
             break
 
-    print("Сумма: ", global_num)
+    print("Сумма: ", num)
 
 
 my_while()
