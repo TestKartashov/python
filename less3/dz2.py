@@ -4,17 +4,20 @@
 # Реализовать вывод данных о пользователе одной строкой.
 
 def print_data_user(**kwargs):
-    return F"{kwargs['first_name']} " \
-           F"{kwargs['last_name']} " \
-           F"{kwargs['year']} " \
-           F"{kwargs['city_live']} " \
-           F"{kwargs['email']} " \
-           F"{kwargs['phone']}"
+    return F"{kwargs.get('first_name')} " \
+           F"{kwargs.get('last_name')} " \
+           F"{kwargs.get('year')} " \
+           F"{kwargs.get('city_live')} " \
+           F"{kwargs.get('email')} " \
+           F"{kwargs.get('phone')}"
 
 
-print(print_data_user(first_name="Alex",
-                      last_name="Kart",
-                      year=1922,
-                      city_live="Moscow",
-                      email="m@ya.ru",
-                      phone="7(999)123321123"))
+user = {'first_name': "Alex",
+        'last_name': "Kart",
+        'year': 1922,
+        'city_live': "Moscow",
+        'email': "m@ya.ru",
+        'phone': "7(999)123321123"}
+
+print(print_data_user(**user))
+

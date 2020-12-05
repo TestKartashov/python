@@ -19,14 +19,14 @@ def my_while():
                 global_num += i
             print("Сумма: ", global_num)
 
-            return 1
+            return True
         except Exception as s:
             print(s)
-            return 1
+            return False
 
     while True:
         num = input("введите несколько чисел через пробел, для завершения введите любой символ ")
-        if list_sum(num) == 0:
+        if not list_sum(num):
             break
 
     print("Сумма: ", global_num)
