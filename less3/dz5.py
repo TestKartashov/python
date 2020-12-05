@@ -13,13 +13,16 @@ def my_while():
             lis = var_str.split(" ")
             nonlocal global_num
             for l in lis:
+                if not l.isdigit():
+                    return 0
                 i = int(l)
                 global_num += i
             print("Сумма: ", global_num)
 
             return 1
-        except:
-            return 0
+        except Exception as s:
+            print(s)
+            return 1
 
     while True:
         num = input("введите несколько чисел через пробел, для завершения введите любой символ ")
