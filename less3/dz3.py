@@ -28,7 +28,3 @@ print(my_max(8, 2, 1))
 print(my_max(2, 1, 8))
 
 print(my_max(2, 8, 1))
-
-
-
-
