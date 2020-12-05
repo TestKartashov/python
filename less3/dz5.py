@@ -13,7 +13,6 @@ def my_while():
             lis = var_str.split(" ")
             nonlocal num
             for l in lis:
-                print(l)
                 if not l.isnumeric():
                     return 0
                 i = int(l)
