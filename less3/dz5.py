@@ -13,7 +13,8 @@ def my_while():
             lis = var_str.split(" ")
             nonlocal num
             for l in lis:
-                if not l.isdigit():
+                print(l)
+                if not l.isnumeric():
                     return 0
                 i = int(l)
                 num += i
@@ -25,8 +26,8 @@ def my_while():
             return False
 
     while True:
-        num = input("введите несколько чисел через пробел, для завершения введите любой символ ")
-        if not list_sum(num):
+        num_text = input("Введите несколько чисел через пробел, для завершения введите любой символ или число с символом: ")
+        if not list_sum(num_text):
             break
 
     print("Сумма: ", num)
