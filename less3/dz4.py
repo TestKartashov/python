@@ -9,13 +9,31 @@
 # Второй — более сложная реализация без оператора **, предусматривающая использование цикла.
 
 def my_func(x, y):
+    '''
+    Функция возведения в степень
+    :param x:
+    :param y:
+    :return:
+    '''
     res = x
-    y = -1 * y
-    for r in range(1, y):
+    '''Какая степень'''
+    chek_st = True
+
+    '''Если степень отрицательная ставим chek_st = False'''
+    if y < 0:
+        chek_st = False
+
+    for r in range(1, abs(y)):
         res *= x
-    return 1/res
+
+    '''Проверка в какую степень возмодить'''
+    if not chek_st:
+        return 1 / res
+    else:
+        return res
 
 
 print("My funct:", my_func(2, -2), "System funct:", 2 ** -2)
 print("My funct:", my_func(2, -4), "System funct:", 2 ** -4)
 print("My funct:", my_func(35, -4), "System funct:", 35 ** -4)
+print("My funct:", my_func(35, 4), "System funct:", 35 ** 4)
