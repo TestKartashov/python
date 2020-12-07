@@ -26,7 +26,7 @@ def my_func(x, y):
     for r in range(1, abs(y)):
         res *= x
 
-    '''Проверка в какую степень возмодить'''
+    '''Проверка в какую степень возводить'''
     if not chek_st:
         return 1 / res
     else:
