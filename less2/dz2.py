@@ -9,16 +9,18 @@ list_text = input("Введите набор цифр от 4 и больше: ")
 
 lis_one = []
 
-
 for i in list_text:
     if i.isdigit():
         lis_one.append(int(i))
 
-if len(lis_one)< 4:
+if len(lis_one) < 4:
     print("Количество цифр меньше необходимого.")
 else:
     print('Как есть lis_one', lis_one)
 
-    lis_one[0], lis_one[1], lis_one[2], lis_one[3] = lis_one[1], lis_one[0], lis_one[3], lis_one[2]
+    i = 0
+    while len(lis_one) > i + 1:
+        lis_one[i], lis_one[i + 1] = lis_one[i + 1], lis_one[i]
+        i += 2
 
     print('Что получилось lis_one', lis_one)
