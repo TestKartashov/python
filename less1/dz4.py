@@ -8,9 +8,22 @@ if not n_str.isdigit() or int(n_str) < 0:
     print('Неверное значение')
     exit()
 
+num = 0
+for i in n_str:
+    t = int(i) % 10
+    if t > num:
+        num = int(i)
+    if num == 9:
+        break
+
+print("Нулевой способ", num)
+
 # Первый способ
 i = -1
 num = 0
+
+
+
 while i < len(n_str):
     if len(n_str) > (i + 1) and num < int(n_str[i + 1]):
         num = int(n_str[i + 1])
@@ -18,7 +31,7 @@ while i < len(n_str):
         break
     i += 1
 
-print(num)
+print('Первый способ', num)
 
 # Второй способ
 i = 0
@@ -35,4 +48,4 @@ while i < len(n_str):
             break
     i += 1
 
-print(max_num)
+print('Второй способ', max_num)
