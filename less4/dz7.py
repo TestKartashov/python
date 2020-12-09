@@ -18,5 +18,22 @@ def fact(n):
         yield {F"{i}!": reduce(my_f, [el for el in range(1, (i + 1))])}
 
 
+print("Первый способ")
 for el in fact(4):
     print(el)
+
+
+def fact2(n):
+    '''Для каждого с 1! и до n!'''
+    for i in range(1, (n + 1)):
+        '''Формирование генератора'''
+        yield reduce(my_f, [el for el in range(1, (i + 1))])
+
+
+print("Второй способ")
+f = fact2(4)
+
+print("1! = ", next(f))
+print("2! = ", next(f))
+print("3! = ", next(f))
+print("4! = ", next(f))
