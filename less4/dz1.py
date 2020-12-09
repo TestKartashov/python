@@ -8,4 +8,5 @@ from sys import argv
 
 '''Сделаем проверку'''
 if len(argv) > 3:
-    print((int(argv[1]) * int(argv[2])) + int(argv[3]))
+    file_path, work, st, prem = argv
+    print((int(work) * int(st)) + int(prem))
