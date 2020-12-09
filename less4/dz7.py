@@ -12,10 +12,11 @@ def my_f(prev_el, el):
 
 
 def fact(n):
-    for i in range(1, (n+1)):
-        yield reduce(my_f, [el for el in range(1, (i + 1))])
+    '''Для каждого с 1! и до n!'''
+    for i in range(1, (n + 1)):
+        '''Формирование генератора с указанием какой факториал равен чему'''
+        yield {F"{i}!": reduce(my_f, [el for el in range(1, (i + 1))])}
 
 
 for el in fact(4):
     print(el)
-
