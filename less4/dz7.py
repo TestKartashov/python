@@ -12,17 +12,10 @@ def my_f(prev_el, el):
 
 
 def fact(n):
-    yield reduce(my_f, [el for el in range(1, (n + 1))])
+    for i in range(1, (n+1)):
+        yield reduce(my_f, [el for el in range(1, (i + 1))])
 
 
 for el in fact(4):
     print(el)
 
-
-def fatc_2(n):
-    for el in range(1, (n + 1)):
-        yield el
-
-
-for el in fatc_2(4):
-    print(el)
