@@ -30,8 +30,8 @@ def fact2(n):
         yield reduce(my_f, [el for el in range(1, (i + 1))])
 
 
-print("Второй способ")
-f = fact2(4)
+print("Второй способ с большим значением")
+f = fact2(400)
 
 print("1! = ", next(f))
 print("2! = ", next(f))
