@@ -10,6 +10,7 @@ from functools import reduce
 def my_f(prev_el, el):
     return prev_el * el
 
+
 def fact2(n):
     '''Для каждого с 1! и до n!'''
     start = 1
@@ -18,7 +19,8 @@ def fact2(n):
         yield reduce(my_f, [el for el in range(1, (start + 1))])
         start += 1
 
-print("Первый способ с большим значением")
+
+print('Первый способ с большим значением')
 f = fact2(40000000000)
 
 print("1! = ", next(f))
@@ -39,6 +41,3 @@ def fact(n):
 print("Второй способ")
 for el in fact(4):
     print(el)
-
-
-

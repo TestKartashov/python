@@ -2,10 +2,11 @@
 # Например, в первом задании выводим целые числа, начиная с 3, а при достижении числа 10 завершаем цикл.
 from itertools import count
 
-for c in count(3):
-    if c == 10:
-        break
-    print(c)
+def my_count():
+    for c in count(3):
+        if c == 10:
+            break
+        print(c)
 
 
 

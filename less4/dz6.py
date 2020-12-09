@@ -10,8 +10,12 @@
 # б) итератор, повторяющий элементы некоторого списка,
 
 print('1 Script')
-import dz6a
+from dz6a import my_count
+
+my_count()
 
 print('')
 print('2 Script')
-import dz6b
+from dz6b import my_cycle
+
+my_cycle()

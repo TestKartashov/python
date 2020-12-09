@@ -3,9 +3,10 @@
 
 from itertools import cycle
 
-cnt = 0
-for c in cycle('ABCD'):
-    if cnt == 10:
-        break
-    print(c)
-    cnt += 1
+def my_cycle():
+    cnt = 0
+    for c in cycle('ABCD'):
+        if cnt == 10:
+            break
+        print(c)
+        cnt += 1
