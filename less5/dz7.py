@@ -36,12 +36,12 @@ def calc(file):
     dict_r = dict()
     ls_average = []
     for dict_f in firmas:
-        summ = int(dict_f["выручка"]) - int(dict_f["издержки"])
+        summ = float(dict_f["выручка"]) - int(dict_f["издержки"])
         dict_r[dict_f["название"]] = summ
         if summ > 0:
             ls_average.append(summ)
     dict_av = dict()
-    dict_av["average_profit"] = int(sum(ls_average) / len(ls_average))
+    dict_av["average_profit"] = sum(ls_average) / len(ls_average)
     ls.append(dict_r)
     ls.append(dict_av)
     return ls
