@@ -9,7 +9,7 @@ def Average(lst):
     return sum(lst) / len(lst)
 
 
-with open("dz3.txt", "r") as fl:
+with open("dz3.txt", "r", encoding="UTF-8") as fl:
     ls = fl.readlines()
     sotr = [l for l in ls if float(l.split()[1]) < 20000]
     for s in sotr:

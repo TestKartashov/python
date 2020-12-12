@@ -7,5 +7,5 @@ while True:
     st = input("Введите данные: ")
     if st == "":
         break;
-    with open("dz1.txt", 'a') as fl:
+    with open("dz1.txt", 'a', encoding="UTF-8") as fl:
         fl.write(f"{st}\n")

@@ -8,7 +8,7 @@
 # заменяться на русские. Новый блок строк должен записываться в новый текстовый файл.
 
 
-with open("dz4.txt", "r") as f:
+with open("dz4.txt", "r", encoding="UTF-8") as f:
     ls = f.readlines()
     lst = []
     for l in ls:
