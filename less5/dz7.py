@@ -25,7 +25,7 @@ def parser_file(file):
             yield dict_firm
 
 
-def calc(file):
+def calc_to_json(file):
     ls = []
     dict_r = dict()
     ls_average = []
@@ -38,9 +38,9 @@ def calc(file):
     dict_av["average_profit"] = sum(ls_average) / len(ls_average)
     ls.append(dict_r)
     ls.append(dict_av)
-    return ls
+    return con_json(ls)
 
 
-tr = calc("dz7.txt")
-js = con_json(tr)
-print(js)
+tr = calc_to_json("dz7.txt")
+
+print(tr)

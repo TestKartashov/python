@@ -11,8 +11,8 @@ def Average(lst):
 
 with open("dz3.txt", "r", encoding="UTF-8") as fl:
     ls = fl.readlines()
-    sotr = [l for l in ls if float(l.split()[1]) < 20000]
+    sotr = [l for l in ls if float(l.split(",")[1]) < 20000]
     for s in sotr:
         print(s)
-    summs = [float(l.split()[1]) for l in ls]
+    summs = [float(l.split(",")[1]) for l in ls]
     print("Среднее значения по всем", Average(summs))
