@@ -42,6 +42,5 @@ def calc(file):
 
 
 tr = calc("dz7.txt")
-print("Справочник ", tr)
 js = con_json(tr)
-print("Результат ", js)
+print(js)
