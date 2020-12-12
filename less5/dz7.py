@@ -10,6 +10,8 @@
 # Итоговый список сохранить в виде json-объекта в соответствующий файл.
 # Пример json-объекта:
 # [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
+from json import dumps as con_json
+
 
 def openf(fl):
     with open(fl, "r", encoding="UTF-8") as f:
@@ -47,4 +49,6 @@ def calc(file):
     return ls
 
 
-print(calc("dz7.txt"))
+tr = calc("dz7.txt")
+js = con_json(tr)
+print(js)
