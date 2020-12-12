@@ -13,31 +13,23 @@
 from json import dumps as con_json
 
 
-def openf(fl):
-    with open(fl, "r", encoding="UTF-8") as f:
-        return f.readlines()
-
-
 def parser_file(file):
-    ls_file = openf("dz7.txt")
-    ls_firm = []
-    for ls in ls_file:
-        firm = ls.split(" ")
-        dict_firm = dict()
-        dict_firm["название"] = firm[0]
-        dict_firm["форма"] = firm[1]
-        dict_firm["выручка"] = firm[2]
-        dict_firm["издержки"] = firm[3]
-        ls_firm.append(dict_firm)
-    return ls_firm
+    with open(file, "r", encoding="UTF-8") as ls_file:
+        for ls in ls_file:
+            firm = ls.split(" ")
+            dict_firm = dict()
+            dict_firm["название"] = firm[0]
+            dict_firm["форма"] = firm[1]
+            dict_firm["выручка"] = firm[2]
+            dict_firm["издержки"] = firm[3]
+            yield dict_firm
 
 
 def calc(file):
-    firmas = parser_file(file)
     ls = []
     dict_r = dict()
     ls_average = []
-    for dict_f in firmas:
+    for dict_f in parser_file(file):
         summ = float(dict_f["выручка"]) - int(dict_f["издержки"])
         dict_r[dict_f["название"]] = summ
         if summ > 0:
