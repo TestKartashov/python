@@ -5,7 +5,7 @@ n_str = input('Enter number (n): ')
 
 if not n_str.isdigit():
     print('Неверное значение')
-
+    exit()
 
 n = int(n_str)
 nn = int(n_str + n_str)

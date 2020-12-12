@@ -13,7 +13,7 @@ try:
     cost = float(cost_txt)
 except:
     print('Неверное значение')
-
+    exit()
 
 # Определите, с каким финансовым результатом работает фирма (прибыль — выручка больше издержек, или убыток — издержки больше выручки).
 if revenue == cost:
@@ -34,7 +34,7 @@ if revenue > cost:
     count_people_txt = input('Enter number of employees of the company: ')
     if not count_people_txt.isdigit() or int(count_people_txt)<0:
         print('Неверное значение')
-
+        exit()
 
     # определите прибыль фирмы в расчете на одного сотрудника
     prof_emp = profit / int(count_people_txt)
