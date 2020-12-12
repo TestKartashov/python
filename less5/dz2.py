@@ -7,7 +7,6 @@ cnt = 0
 for line in my_f:
     cnt += 1
     print("-----------------------------------------")
-
     print("Count row", cnt)
     strLs = line.split(" ")
     strLs = [s for s in strLs if s != "\n"]
