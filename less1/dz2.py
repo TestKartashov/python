@@ -9,7 +9,7 @@ second = input('Enter second: ')
 
 if not second.isdigit():
     print('Неверное значение')
-    exit()
+
 
 second = int(second)
 

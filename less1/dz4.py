@@ -6,7 +6,7 @@ n_str = input('Enter number: ')
 
 if not n_str.isdigit() or int(n_str) < 0:
     print('Неверное значение')
-    exit()
+
 
 # Первый способ
 i = -1
