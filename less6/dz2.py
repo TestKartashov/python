@@ -15,11 +15,11 @@ class Road:
     thickness = 1
 
     def __init__(self, length, width):
-        Road._length = length
-        Road._width = width
+        self._length = length
+        self._width = width
 
     def calc(self):
-        return f"{(Road._length * Road._width * Road.mass * Road.thickness) / 1000} т"
+        return f"{(self._length * self._width * self.mass * self.thickness) / 1000} т"
 
 
 r = Road(20, 5000)

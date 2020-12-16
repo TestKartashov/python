@@ -11,7 +11,10 @@ class Worker:
     name = ""
     surname = ""
     position = ""
-    _income = {"wage": 0, "bonus": 0}
+    _income = dict()
+
+    def __init__(self, wage, bonus):
+        self._income = {"wage": wage, "bonus": bonus}
 
 
 class Position(Worker):
@@ -23,10 +26,15 @@ class Position(Worker):
         return self._income["wage"] + self._income["bonus"]
 
 
-a = Position()
+a = Position(20, 30)
 a.name = "Leo"
 a.surname = "Servion"
-a._income = {"wage": 10, "bonus": 10}
+
+b = Position(110, 30)
+b.name = "Seo"
+b.surname = "Tervion"
 
 print(a.get_full_name())
 print(a.get_total_income())
+print(b.get_full_name())
+print(b.get_total_income())

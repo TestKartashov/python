@@ -16,19 +16,19 @@ class Stationery:
 class Pen(Stationery):
 
     def draw(self):
-        print(f"{Pen.title} Запуск отрисовки. Pen")
+        print(f"{self.title} Запуск отрисовки. Pen")
 
 
 class Pencil(Stationery):
 
     def draw(self):
-        print(f"{Pencil.title} Запуск отрисовки. Pencil")
+        print(f"{self.title} Запуск отрисовки. Pencil")
 
 
 class Handle(Stationery):
 
     def draw(self):
-        print(f"{Handle.title} Запуск отрисовки. Handle")
+        print(f"{self.title} Запуск отрисовки. Handle")
 
 
 Stationery = Stationery()
