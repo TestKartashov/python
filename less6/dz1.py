@@ -24,7 +24,6 @@ class TrafficLight:
         self.check_color()
         return self.__color
 
-
     def running(self):
         while True:
             print(self.__period())
