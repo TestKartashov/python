@@ -24,4 +24,5 @@ class Road:
 
 r = Road(20, 5000)
 r.thickness = 1
+r.mass = 25
 print(r.calc())
