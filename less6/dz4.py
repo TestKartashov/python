@@ -31,10 +31,10 @@ class Car:
 class TownCar(Car):
 
     def show_speed(self):
-        if TownCar.speed > 60:
-            print(f"{TownCar.name} Alarm Speed > 60: {TownCar.speed}")
+        if self.speed > 60:
+            print(f"{self.name} Alarm Speed > 60: {self.speed}")
         else:
-            print(f"{TownCar.name} Speed > 60: {TownCar.speed}")
+            print(f"{self.name} Speed > 60: {self.speed}")
 
 
 class SportCar(Car):
@@ -44,10 +44,10 @@ class SportCar(Car):
 class WorkCar(Car):
 
     def show_speed(self):
-        if WorkCar.speed > 40:
-            print(f"{WorkCar.name} Alarm Speed > 40: {WorkCar.speed}")
+        if self.speed > 40:
+            print(f"{self.name} Alarm Speed > 40: {self.speed}")
         else:
-            print(f"{WorkCar.name} Speed: {WorkCar.speed}")
+            print(f"{self.name} Speed: {self.speed}")
 
 
 class PoliceCar(Car):
