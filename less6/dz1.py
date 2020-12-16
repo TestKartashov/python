@@ -22,18 +22,17 @@ class TrafficLight:
 
     def __period(self):
         self.check_color()
-        print(self.__color)
-        sleep(7)
-        self.check_color()
-        print(self.__color)
-        sleep(2)
-        self.check_color()
-        print(self.__color)
-        sleep(7)
+        return self.__color
+
 
     def running(self):
         while True:
-            self.__period()
+            print(self.__period())
+            sleep(7)
+            print(self.__period())
+            sleep(2)
+            print(self.__period())
+            sleep(7)
 
 
 a = TrafficLight()
