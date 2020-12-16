@@ -10,7 +10,7 @@ from time import sleep
 
 
 class TrafficLight:
-    __color = ""
+    __color = None
 
     def check_color(self):
         if self.__color == "Красный":
