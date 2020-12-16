@@ -13,16 +13,16 @@ class TrafficLight:
     __color = None
 
     def check_color(self):
-        if self.__color == "Красный":
-            self.__color = "Желтый"
-        elif self.__color == "Желтый":
-            self.__color = "Зеленый"
+        if TrafficLight.__color == "Красный":
+            TrafficLight.__color = "Желтый"
+        elif TrafficLight.__color == "Желтый":
+            TrafficLight.__color = "Зеленый"
         else:
-            self.__color = "Красный"
+            TrafficLight.__color = "Красный"
 
     def __period(self):
         self.check_color()
-        return self.__color
+        return TrafficLight.__color
 
     def running(self):
         while True:

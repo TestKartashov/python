@@ -16,23 +16,23 @@ class Car:
     is_police = bool
 
     def go(self):
-        print("Go")
+        print(f"{self.name} Go")
 
     def stop(self):
-        print("Stop")
+        print(f"{self.name} Stop")
 
-    def turn(direction):
-        print(f"turn {direction}")
+    def turn(self, direction):
+        print(f"{self.name} turn {direction}")
 
     def show_speed(self):
-        print(self.speed)
+        print(Car.speed)
 
 
 class TownCar(Car):
 
     def show_speed(self):
-        if self.speed > 60:
-            print(f"Speed > 60: {self.speed}")
+        if TownCar.speed > 60:
+            print(f"{TownCar.name} Speed > 60: {TownCar.speed}")
 
 
 class SportCar(Car):
@@ -42,8 +42,8 @@ class SportCar(Car):
 class WorkCar(Car):
 
     def show_speed(self):
-        if self.speed > 40:
-            print(f"Speed > 40: {self.speed}")
+        if WorkCar.speed > 40:
+            print(f"{TownCar.name} Speed > 40: {WorkCar.speed}")
 
 
 class PoliceCar(Car):
