@@ -17,17 +17,16 @@ class Worker:
 class Position(Worker):
 
     def get_full_name(self):
-        return f"{Worker.name} {Worker.surname}"
+        return f"{self.name} {self.surname}"
 
     def get_total_income(self):
-        return Worker._income["wage"] + Worker._income["bonus"]
+        return self._income["wage"] + self._income["bonus"]
 
 
 a = Position()
 a.name = "Leo"
 a.surname = "Servion"
-a._income["wage"] = 100
-a._income["bonus"] = 200
+a._income = {"wage": 10, "bonus": 10}
 
 print(a.get_full_name())
 print(a.get_total_income())

@@ -10,7 +10,7 @@ class Stationery:
     title = ""
 
     def draw(self):
-        print(f"{self.title} Запуск отрисовки.")
+        print(f"{Stationery.title} Запуск отрисовки.")
 
 
 class Pen(Stationery):
