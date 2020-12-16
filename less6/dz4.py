@@ -25,7 +25,7 @@ class Car:
         print(f"{self.name} turn {direction}")
 
     def show_speed(self):
-        print(Car.speed)
+        print(self.speed)
 
 
 class TownCar(Car):
@@ -43,7 +43,7 @@ class WorkCar(Car):
 
     def show_speed(self):
         if WorkCar.speed > 40:
-            print(f"{TownCar.name} Speed > 40: {WorkCar.speed}")
+            print(f"{WorkCar.name} Speed > 40: {WorkCar.speed}")
 
 
 class PoliceCar(Car):
