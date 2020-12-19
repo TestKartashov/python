@@ -49,7 +49,7 @@ b = [[i, a[i]] for i in a]
 print(b)
 print([j for i in b for j in i])
 '''
- 
+
 class ttt:
     def __init__(self):
         print('2')
