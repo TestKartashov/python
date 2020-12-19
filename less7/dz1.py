@@ -21,7 +21,7 @@ class Matrix:
 
     def __add__(self, other):
         temp_add_list = []
-        for x, y in zip_longest(lst1, lst2, fillvalue=0):
+        for x, y in zip_longest(self.lists, other.lists, fillvalue=0):
             temp_ls = []
             for x_1, y_1 in zip_longest(x, y, fillvalue=0):
                 temp_ls.append(x_1 + y_1)
@@ -32,16 +32,17 @@ class Matrix:
 
 lst = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
 
-tt = Matrix(lst)
-print(tt)
+print('Печать матрицы', Matrix(lst))
 
 lst1 = [[1, 1, 1], [5, 5, 5]]
 tt1 = Matrix(lst1)
 lst2 = [[2, 2, 2], [2, 2, 2]]
 tt2 = Matrix(lst2)
 
-print(tt1 + tt2)
+print('Сложение трехмерных матриц', tt1 + tt2)
 
-
-
-
+m_2_2 = [[1, 1], [5, 5]]
+m_3_2 = [[2, 2, 2], [2, 2, 2]]
+matr_2 = Matrix(m_2_2)
+matr_3 = Matrix(m_3_2)
+print('Сложение разных матриц ', matr_2 + matr_3)
