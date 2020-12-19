@@ -17,7 +17,7 @@ class Matrix:
         self.lists = lists
 
     def __str__(self):
-        return ' '.join((str(x) for x in self.lists))
+        return f"Матрица: {' '.join((str(x) for x in self.lists))}"
 
     def __add__(self, other):
         temp_add_list = []
@@ -45,4 +45,5 @@ m_2_2 = [[1, 1], [5, 5]]
 m_3_2 = [[2, 2, 2], [2, 2, 2]]
 matr_2 = Matrix(m_2_2)
 matr_3 = Matrix(m_3_2)
-print('Сложение разных матриц ', matr_2 + matr_3)
+
+print('Сложение разных матриц: ', matr_2, matr_3, 'Result: ', matr_2 + matr_3)
