@@ -44,8 +44,8 @@ class пальто(clothes):
     def fc(self):
         return self.fabric_consumption(self.size, 6.5, 0.5)
 
+
 t = пальто(2)
 print(t.fc)
 t = костюм(2)
 print(t.fc)
-
