@@ -19,7 +19,7 @@ class clothes(ABC):
         pass
 
 
-class костюм(clothes):
+class suit(clothes):
 
     def __init__(self, size):
         self.size = size
@@ -29,7 +29,7 @@ class костюм(clothes):
         return 2 * self.size + 0.2
 
 
-class пальто(clothes):
+class coat(clothes):
 
     def __init__(self, size):
         self.size = size
@@ -39,7 +39,7 @@ class пальто(clothes):
         return self.size / 6.5 + 0.5
 
 
-t = пальто(2)
+t = suit(2)
 print(t.fabric_consumption)
-t = костюм(2)
+t = coat(2)
 print(t.fabric_consumption)
