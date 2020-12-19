@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 from functools import reduce
 from functools import partial
 
@@ -48,4 +49,18 @@ b = [[i, a[i]] for i in a]
 print(b)
 print([j for i in b for j in i])
 '''
+ 
+class ttt:
+    def __init__(self):
+        print('2')
 
+    def cvll(self):
+        print("d")
+
+
+
+
+
+t = ttt()
+t.cvll()
+>>>>>>> Stashed changes
