@@ -17,7 +17,7 @@ class Matrix:
         self.lists = lists
 
     def __str__(self):
-        return f"Матрица: {' '.join((str(x) for x in self.lists))}"
+        return f"Матрица: {''.join((str(x) for x in self.lists))}"
 
     def __add__(self, other):
         temp_add_list = []
@@ -27,7 +27,7 @@ class Matrix:
                 temp_ls.append(x_1 + y_1)
 
             temp_add_list.append(temp_ls)
-        return temp_add_list;
+        return Matrix(temp_add_list)
 
 
 lst = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
