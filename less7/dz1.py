@@ -9,6 +9,7 @@
 # сложения двух объектов класса Matrix (двух матриц). Результатом сложения должна быть новая матрица.
 # Подсказка: сложение элементов матриц выполнять поэлементно — первый элемент
 # первой строки первой матрицы складываем с первым элементом первой строки второй матрицы и т.д.
+from itertools import zip_longest
 
 
 class Matrix:
@@ -16,7 +17,31 @@ class Matrix:
         self.lists = lists
 
     def __str__(self):
-        return ' '.join(self.lists)
+        return ' '.join((str(x) for x in self.lists))
 
     def __add__(self, other):
-        pass
+        temp_add_list = []
+        for x, y in zip_longest(lst1, lst2, fillvalue=0):
+            temp_ls = []
+            for x_1, y_1 in zip_longest(x, y, fillvalue=0):
+                temp_ls.append(x_1 + y_1)
+
+            temp_add_list.append(temp_ls)
+        return temp_add_list;
+
+
+lst = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+
+tt = Matrix(lst)
+print(tt)
+
+lst1 = [[1, 1, 1], [5, 5, 5]]
+tt1 = Matrix(lst1)
+lst2 = [[2, 2, 2], [2, 2, 2]]
+tt2 = Matrix(lst2)
+
+print(tt1 + tt2)
+
+
+
+
