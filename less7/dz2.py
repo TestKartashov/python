@@ -15,7 +15,7 @@ from abc import ABC, abstractmethod
 class clothes(ABC):
 
     @abstractmethod
-    def fabric_consumption(self, size, param, coff):
+    def fabric_consumption(self):
         pass
 
 
@@ -24,12 +24,9 @@ class костюм(clothes):
     def __init__(self, size):
         self.size = size
 
-    def fabric_consumption(self, size, param, coff):
-        return size * param + coff
-
     @property
-    def fc(self):
-        return self.fabric_consumption(self.size, 2, 0.3)
+    def fabric_consumption(self):
+        return 2 * self.size + 0.2
 
 
 class пальто(clothes):
@@ -37,15 +34,12 @@ class пальто(clothes):
     def __init__(self, size):
         self.size = size
 
-    def fabric_consumption(self, size, param, coff):
-        return size / param + coff
-
     @property
-    def fc(self):
-        return self.fabric_consumption(self.size, 6.5, 0.5)
+    def fabric_consumption(self):
+        return self.size / 6.5 + 0.5
 
 
 t = пальто(2)
-print(t.fc)
+print(t.fabric_consumption)
 t = костюм(2)
-print(t.fc)
+print(t.fabric_consumption)
