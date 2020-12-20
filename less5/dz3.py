@@ -5,7 +5,7 @@
 # Иванов 23543.12
 # Петров 13749.32
 
-def Average(lst):
+def average(lst):
     return sum(lst) / len(lst)
 
 
@@ -15,4 +15,4 @@ with open("dz3.txt", "r", encoding="UTF-8") as fl:
     for s in sotr:
         print(s)
     summs = [float(l.split(",")[1]) for l in ls]
-    print("Среднее значения по всем", Average(summs))
+    print("Среднее значения по всем", average(summs))
