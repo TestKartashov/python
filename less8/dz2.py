@@ -17,5 +17,5 @@ def calc(a: int, b: int):
 try:
     t = input("Enter number: ")
     print(calc(100, int(t)))
-except Zero as s:
+except Exception as s:
     print("Error ",s)
