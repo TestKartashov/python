@@ -3,14 +3,19 @@
 # в качестве делителя программа должна корректно обработать эту ситуацию
 # и не завершиться с ошибкой.
 
-class Zero(ZeroDivisionError):
+class Zero(Exception):
     def __init__(self, txt):
         self.txt = txt
 
+
+def calc(a: int, b: int):
+    if not b:
+        raise Zero('Ошибка Вы ввели 0')
+    return a / b
+
+
 try:
     t = input("Enter number: ")
-    if int(t) == 0:
-        raise Zero('Ошибка Вы ввели 0')
-    s = 100 / int(t)
+    print(calc(100, int(t)))
 except Zero as s:
-    print(s)
+    print("Error ",s)
