@@ -12,5 +12,25 @@
 # реализовать проверку типа элемента и вносить его в список, только если введено число.
 # Класс-исключение должен не позволить пользователю ввести текст (не число)
 # и отобразить соответствующее сообщение. При этом работа скрипта не должна завершаться.
+import re
+
+class Number(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+list_number = []
+while True:
+    try:
+        n = input("Введите число или stop для остановки: ")
+        if n == "stop":
+            break
+        if not bool(re.match('^[1234567890.]+$', n)):
+            raise Number("Ввели не число")
+        list_number.append(float(n))
+
+    except Number as t:
+        print(t)
+
+print("Что ввели:",list_number)
 
 
