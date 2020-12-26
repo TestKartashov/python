@@ -14,9 +14,11 @@
 # и отобразить соответствующее сообщение. При этом работа скрипта не должна завершаться.
 import re
 
+
 class Number(Exception):
     def __init__(self, txt):
         self.txt = txt
+
 
 list_number = []
 while True:
@@ -31,6 +33,4 @@ while True:
     except Number as t:
         print(t)
 
-print("Что ввели:",list_number)
-
-
+print("Что ввели:", list_number)
