@@ -10,14 +10,11 @@
 # выведите результат. Выполните вызов методов и также покажите результат.
 
 class Car:
-    speed = float
-    color = str
-    name = str
+    speed: float
+    color: str
+    name: str
     is_police = False
     msg = ""
-
-
-
 
     def go(self):
         self.msg = "Auto"
@@ -63,6 +60,7 @@ class PoliceCar(Car):
 
     def __init__(self):
         self.is_police = True
+
 
 print('----------------')
 TownCar = TownCar()
