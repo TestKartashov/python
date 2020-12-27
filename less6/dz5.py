@@ -31,13 +31,13 @@ class Handle(Stationery):
         return f"{super().draw()} Handle"
 
 
-Stationery = Stationery()
-Stationery.title = "Stationery"
-print(Stationery.draw())
+stationery = Stationery()
+stationery.title = "Stationery"
+print(stationery.draw())
 
-Pen = Pen()
-Pen.title = "Pen"
-print(Pen.draw())
+pen = Pen()
+pen.title = "Pen"
+print(pen.draw())
 
 Pencil = Pencil()
 Pencil.title = "Pencil"

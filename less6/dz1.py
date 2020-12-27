@@ -10,15 +10,11 @@ from time import sleep
 
 
 class TrafficLight:
-    __color = None
+    __color = "Зеленый"
+    dict_color = {"Красный": "Желтый", "Желтый": "Зеленый", "Зеленый": "Красный"}
 
     def check_color(self):
-        if TrafficLight.__color == "Красный":
-            TrafficLight.__color = "Желтый"
-        elif TrafficLight.__color == "Желтый":
-            TrafficLight.__color = "Зеленый"
-        else:
-            TrafficLight.__color = "Красный"
+        TrafficLight.__color = self.dict_color[TrafficLight.__color]
 
     def __period(self):
         self.check_color()
@@ -27,11 +23,11 @@ class TrafficLight:
     def running(self):
         while True:
             print(self.__period())
-            sleep(7)
+            sleep(.5)
             print(self.__period())
-            sleep(2)
+            sleep(.5)
             print(self.__period())
-            sleep(7)
+            sleep(.5)
 
 
 a = TrafficLight()
